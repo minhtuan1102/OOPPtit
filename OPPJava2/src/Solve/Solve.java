@@ -12,6 +12,17 @@ import java.util.Scanner;
 import java.util.TreeSet;
 
 public class Solve{
-
+    public static void main(String[] args) throws FileNotFoundException {
+        Scanner sc = new Scanner(new File("OPPJava2/src/Solve/BANGDIEM.in"));
+        ArrayList<J07054> list = new ArrayList<>();
+        int t = Integer.parseInt(sc.nextLine());
+        while(t-- !=0){
+            list.add(new J07054(sc.nextLine(),Integer.parseInt(sc.nextLine()),Integer.parseInt(sc.nextLine(),Integer.parseInt(sc.nextLine()))));
+        }
+        Collections.sort(list);
+        for(J07054 x : list){
+            System.out.println(x);
+        }
+    }
 }
 
