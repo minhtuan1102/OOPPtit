@@ -1,0 +1,42 @@
+package THCODEPTIT;
+
+import java.io.*;
+import java.math.BigInteger;
+import java.util.*;
+
+public class Solve  {
+    public static class BAI5 implements Comparable<BAI5> {
+        String code;
+        String name;
+        String Class;
+        String mail;
+        String nb;
+        public BAI5(String code, String name, String Class, String mail, String nb) {
+            this.code = code;
+            this.name = name;
+            this.Class = Class;
+            this.mail = mail;
+            this.nb = "0" + nb;
+        }
+        @Override
+        public String toString() {
+            return String.format("%s %s %s %s %s", code, name, Class, mail, nb);
+        }
+        @Override
+        public int compareTo(BAI5 o) {
+            if(this.Class.compareTo(o.Class) != 0) return o.Class.compareTo(this.Class);
+            return this.code.compareTo(o.code);
+        }
+
+    }
+    public static void main(String[] args) throws IOException, ClassNotFoundException {
+        Scanner sc = new Scanner(new File("DANHSACH.in"));
+        ArrayList<String> a = new ArrayList<>();
+        while (sc.hasNextLine()){
+            a.add(String.valueOf(new BAI5(sc.nextLine(),sc.nextLine(),sc.nextLine(),sc.nextLine(),sc.nextLine())));
+        }
+        Collections.sort(a);
+        for (String x:a)
+            System.out.println(x);
+    }
+}
