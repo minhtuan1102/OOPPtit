@@ -1,0 +1,247 @@
+Bai1
+Cho xâu S có độ dài bằng N và chỉ gồm 3 loại kí tự R, G, B. Nhiệm vụ của bạn là hãy đếm số lượng bộ chỉ số (i, j, k) (1 ≤ i < j < k ≤ N) sao cho:
+
+S[i] ≠ S[j], S[i] ≠ S[k], S[j] ≠ S[k]
+j – i ≠ k – j.
+Input:
+
+Dòng đầu tiên là số nguyên N (1 ≤ N ≤ 4000).
+
+Dòng thứ hai là xâu S gồm N kí tự.
+
+Output:
+
+In ra số lượng bộ ba chỉ số khác biệt thỏa mãn tính chất của đề bài.
+
+Test ví dụ:
+
+Input
+
+Ouput
+
+4
+
+RRGB
+
+1
+
+10
+
+RBGRRGBRGG
+
+23
+
+ 
+
+Giải thích test 1:
+
+Bộ chỉ số (1, 3, 4) là bộ ba thỏa mãn duy nhất.
+
+Bộ chỉ số (2, 3, 4) thỏa mãn tính chất thứ nhất nhưng lại vi phạm tính chất thứ 2.
+
+Bai2
+LŨY THỪA
+
+Cho hai số N và M nguyên dương.
+
+Hãy xác định trong biểu diễn thập phân của tổng S=2N + 3M thì chữ số đầu tiên là chữ số nào?
+
+Ví dụ:
+
+với N = 4, M = 2 thì S = 25 có chữ số đầu tiên là 2.
+với N = 8, M = 4 thì S = 337 có chữ số đầu tiên là 3.
+Input:
+
+Gồm hai số nguyên dương N và M (1 ≤ N, M ≤ 200).
+
+Output: 
+
+Hãy in ra chữ số đầu tiên của số S.
+
+Test ví dụ:
+
+Input
+
+Output
+
+4 2
+
+ 
+
+2
+
+8 4
+
+3
+
+Bai3
+CÁC SỐ GẦN ĐẸP
+
+Các số đẹp được định nghĩa là số mà trong biểu diễn thập phân của nó thì các chữ số hoàn toàn giống nhau. Một số được gọi là gần đẹp nếu như với mọi cặp chữ số cạnh nhau, độ chênh lệch giữa 2 chữ số không vượt quá 1.
+
+Ví dụ, 12345 hay 445 là các số gần đẹp, còn 142523, 228 hay 2468 không phải là số gần đẹp.
+
+Yêu cầu: Cho số nguyên dương N, hãy tìm số gần đẹp thứ N.
+
+Input:
+
+Gồm một số nguyên dương N duy nhất (1 ≤ N ≤ 100000).
+
+Output: 
+
+In ra số gần đẹp thứ N.
+
+Test ví dụ:
+
+Input
+
+Output
+
+14
+
+22
+
+1
+
+1
+
+20
+
+44
+
+Bai4
+TỔNG XOR
+
+Cho dãy số A[] có N phần tử. Có Q truy vấn, với mỗi truy vấn [L, R], bạn cần liệt kê ra các phần tử có số lần xuất hiện là chẵn, rồi tính tổng XOR các phần tử này lại với nhau.
+
+Input:
+
+Dòng đầu tiên là số nguyên N và Q (1 ≤ N, Q ≤ 200000).
+
+Dòng tiếp theo gồm N số nguyên A[i] (1 ≤ A[i] ≤ 109).
+
+Q dòng tiếp theo, mỗi dòng gồm 2 số nguyên L, R mô tả một truy vấn (1 ≤ L ≤ R ≤ N).
+
+Output: 
+
+Với mỗi truy vấn, hãy in ra tổng XOR tìm được.
+
+Test ví dụ:
+
+Input
+
+Output
+
+3
+
+1 2 3
+
+1
+
+1 3
+
+0
+
+8
+
+1 2 1 5 5 2 5 3
+
+3
+
+4 7
+
+2 6
+
+4 5
+
+0
+
+7
+
+5
+
+Bai5
+
+Cho số nguyên M cho trước. Nhiệm vụ của bạn là hãy đếm số lượng dãy số có các phần tử liên tiếp nhau dạng A, A+1, A+2, …, B sao cho tổng của dãy số đúng bằng M?
+
+Input:
+
+Dữ liệu đầu vào chứa một số nguyên M duy nhất (1 ≤ M ≤ 1012).
+
+Output: 
+
+Hãy in ra số lượng dãy số thỏa mãn tính chất của đề bài.
+
+Test ví dụ:
+
+Input
+
+Output
+
+6
+
+4
+
+2
+
+2
+
+1000000
+
+14
+
+ 
+
+Giải thích test 1:
+
+[6], [1 2 3], [ 0, 1, 2, 3], [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6]
+
+Giải thích test 2:
+
+[2], [-1 0 1 2]
+
+Bai6
+VẪN LÀ TỔNG CÁC CHỮ SỐ
+
+Cho hai số nguyên A và B. Xâu S được xây dựng bằng cách viết liền các số từ A, A+1, A+2, …, B.
+
+Ví dụ với A = 40 và B = 42, ta có S = 404142. Tổng các chữ số của xâu S bằng 4+0+4+1+4+2 = 15.
+
+Nhiệm vụ của bạn là hãy tính tổng tất cả các chữ số của xâu S.
+
+Input:
+
+Dòng đầu tiên là số lượng bô test T (T ≤ 100).
+
+Mỗi test gồm 2 số nguyên A, B (0 ≤ A ≤ B ≤ 1015).
+
+Output: 
+
+Với mỗi test, hãy in ra đáp án tìm được trên một dòng.
+
+Test ví dụ:
+
+Input
+
+Output
+
+4
+
+0 9
+
+20 29
+
+40 42
+
+1000 9999
+
+ 
+
+45
+
+65
+
+15
+
+166500
+
